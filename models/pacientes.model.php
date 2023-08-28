@@ -28,8 +28,8 @@ class Pacientes
     {
         $con = new ClaseConectar();
         $con = $con->ProcedimientoConectar();
-        $cadena = "INSERT into Pacientes(Nombres,Apellidos,Cedula,Estado_Civil_idEstado_Civil,TipoSangre_idTipoSangre,Usuarios_idUsuarios,FechaNacimiento) values ( '$Nombres', '$Apellidos', '$Cedula', $Estado_Civil_idEstado_Civil,  $TipoSangre_idTipoSangre,  $Usuarios_idUsuarios,  $FechaNacimiento)";
-    echo $cadena;
+        $cadena = "INSERT into Pacientes(Nombres,Apellidos,Cedula,Estado_Civil_idEstado_Civil,TipoSangre_idTipoSangre,Usuarios_idUsuarios,FechaNacimiento) values ( '$Nombres', '$Apellidos', '$Cedula', $Estado_Civil_idEstado_Civil,  $TipoSangre_idTipoSangre,  $Usuarios_idUsuarios, '$FechaNacimiento')";
+
         if (mysqli_query($con, $cadena)) {
             return "ok";
         } else {
